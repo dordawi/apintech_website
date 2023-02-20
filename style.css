@@ -407,9 +407,9 @@ footer {
 
 /*small tablets/portrait view*/
 @media screen and (max-width: 992px) {
-  body {
+  /* body {
     overflow: hidden;
-  }
+  } */
   .aboutUsContainer {
     grid-template-columns: repeat(1, 1fr);
     padding: 1rem;
