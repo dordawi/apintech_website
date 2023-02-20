@@ -1,0 +1,552 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+  --mainColor: #082032;
+  --secondColor: #f0a500;
+  font-size: 16px;
+  line-height: 1.6;
+}
+h1 {
+  color: var(--mainColor);
+  padding-bottom: 2rem;
+}
+/* --------------the nav section styling--------------------*/
+nav {
+  height: 8vh;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  width: 55%;
+  justify-content: space-around;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  color: var(--mainColor);
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background-color: var(--secondColor);
+  height: 4px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.picLogo {
+  height: 5rem;
+  padding: 0.5rem;
+}
+
+/*burger styling*/
+.line {
+  width: 3em;
+  height: 0.3em;
+  background-color: var(--mainColor);
+  margin: 0.7em;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.hamburger {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+
+/*------------------- the slider section styling --------------------------*/
+#hcg-slider-1 .hcg-slide-container {
+  width: auto;
+  height: auto;
+}
+.hcg-slider {
+  text-align: center;
+}
+.hcg-slide-container {
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+}
+.hcg-slides {
+  display: none;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.hcg-slides img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+}
+.hcg-slide-dot-control {
+  margin-top: 10px;
+  text-align: center;
+}
+.hcg-slide-dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.hcg-slide-dot.dot-active {
+  background-color: #334756;
+}
+
+.animated {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+/*------------the about us section styling---------------*/
+.aboutUsSection {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.aboutUsSection h1::before {
+  content: "";
+  margin: 0;
+  display: block;
+  height: 4px;
+  width: 8rem;
+  background-color: var(--secondColor);
+  border-radius: 10px;
+}
+
+.aboutUsSection h1 {
+  align-self: flex-start;
+}
+.aboutUsContainer {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  margin: 30px, auto;
+}
+
+.aboutUsContent p {
+  padding-top: 1rem;
+  text-align: justify;
+}
+.aboutUsContent p:first-of-type {
+  padding-top: 0;
+}
+.imgAboutUs {
+  width: 100%;
+  margin: auto;
+}
+.imgAboutUs img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+/*----------------the offer section styling --------------------*/
+.offerSection {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.offerSection h1::before {
+  content: "";
+  margin: 0;
+  display: block;
+  height: 4px;
+  width: 8rem;
+  background-color: var(--secondColor);
+}
+.offerSection h1 {
+  align-self: flex-start;
+}
+.offerContainer {
+  width: 90vw;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.offerItem {
+  display: flex;
+  flex-direction: column;
+}
+.imgOfferItem {
+  max-height: 40%;
+  flex-shrink: 0;
+}
+.imgOfferItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.textOfferItem {
+  padding: 2rem 1rem 0rem 1rem;
+}
+.textOfferItem h3 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textOfferItem h3::after {
+  content: "";
+  margin: 0.5rem 0 1rem 0;
+  display: block;
+  height: 4px;
+  width: 80%;
+  background-color: var(--secondColor);
+}
+
+.offerItem ul {
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  /* list-style-image: url("sqpurple.gif");  --> with this line of code you can specify an image as the list-item marker in a list*/
+  list-style-type: "\2714"; /*here the unicode charater is used (thick symbol/checkmark symbol, CSS-code, https://unicode-table.com/en/2713/*/
+}
+.offerItem ul li {
+  padding-left: 0.5rem;
+}
+
+.fa-ul li {
+  list-style-type: none;
+}
+
+/*------------------------------the galery section styling--------------------*/
+.gallery {
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.gallery h1::before {
+  content: "";
+  margin: 0;
+  display: block;
+  height: 4px;
+  width: 8rem;
+  background-color: var(--secondColor);
+}
+.gallery h1 {
+  align-self: flex-start;
+}
+.gallery .controls {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  list-style: none;
+  gap: 20px;
+  font-weight: bold;
+  color: #334756;
+}
+.gallery .controls .buttons {
+  height: 40px;
+  width: auto;
+  padding: 0 1rem;
+  line-height: 20px;
+  gap: 20px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.gallery .controls .buttons.active {
+  background-color: var(--secondColor);
+  color: white;
+  border-radius: 2px;
+}
+
+.image-container {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.gallery .image-container .image {
+  height: 10rem;
+  width: 15rem;
+  overflow: hidden;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.gallery .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.gallery .image-container .image:hover img {
+  transform: scale(1.1);
+}
+
+/* ----------------------- the footer section styling-----------------------------*/
+footer {
+  background-color: var(--mainColor);
+  color: white;
+  font-weight: 200;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.footerBottom::before {
+  content: "";
+  margin: auto;
+  display: block;
+  height: 4px;
+  width: 60%;
+  background-color: var(--secondColor);
+}
+.footerTop {
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+.footerTop p:first-child {
+  padding-bottom: 0.7rem;
+  font-size: 1.5rem;
+}
+.footerTop i {
+  margin-right: 1rem;
+}
+.footerBottom p:first-child {
+  padding-top: 1rem;
+}
+.footerBottom {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/*------------------responsive styles-----------------------*/
+
+/*tablets and small desktops*/
+@media screen and (min-width: 992px) and (max-width: 1023px) {
+  .aboutUsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .offerContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .offerItem ul:first-child {
+    padding-bottom: 3rem;
+  }
+  .imgOfferItem {
+    height: 45%;
+  }
+  .gallery .controls {
+    justify-content: center;
+  }
+  .image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .gallery .image-container .image {
+    height: 10rem;
+    width: 15rem;
+  }
+}
+
+/*small tablets/portrait view*/
+@media screen and (max-width: 992px) {
+  body {
+    overflow: hidden;
+  }
+  .aboutUsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+  }
+  .offerContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 1rem;
+  }
+  .imgOfferItem {
+    height: 25%;
+  }
+  .gallery .controls {
+    justify-content: center;
+  }
+  .gallery .image-container .image {
+    height: 10rem;
+    width: 15rem;
+  }
+
+  .hamburger {
+    display: block;
+    transition: 0.3s ease-in-out;
+  }
+
+  .hamburger.active .line:first-child {
+    transform: translateY(-300px);
+  }
+  .hamburger.active .line:nth-child(2) {
+    transform: rotate(-405deg) translateY(8px);
+  }
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(-320deg) translateY(-10px);
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    background-color: #334756;
+    height: 92vh;
+    flex-direction: column;
+    text-align: center;
+    transform: translate(100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  nav ul li a:hover::after {
+    width: 70%;
+  }
+
+  ul.active {
+    transform: translate(0%);
+  }
+}
+
+/*small tablets and large smartphones*/
+/* @media screen and (min-width: 600px) {
+  .aboutUsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+  .offerContainer {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+  .imgOfferItem {
+    max-height: 30%;
+  }
+  .image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 2rem;
+    padding-right: 0rem;
+  }
+} */
+
+/*smartphones*/
+@media screen and (max-width: 600px) {
+  /* body {
+    overflow: hidden;
+  } */
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 0 1rem;
+    z-index: 1;
+    font-size: 0.8rem;
+  }
+  .aboutUsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+  .offerContainer {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .gallery .image-container .image {
+    height: 6rem;
+    width: 11rem;
+  }
+  .gallery .controls {
+    justify-content: center;
+  }
+
+  .picLogo {
+    height: 4rem;
+    padding: 0.5rem;
+  }
+  nav ul {
+    width: 100%;
+  }
+}
