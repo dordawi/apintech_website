@@ -9,6 +9,6 @@ It has a:
 - offer presentation section,
 - filtered photo gallery. 
 
-#### The website is written in html, css and java script.
+#### The website is written in html, css and java script (added as a <script> tags at the end of the html).
 
 It has responsive styles that works on tablets and smartphones. For smaller screens there is a hamburger menu in the nav bar.
