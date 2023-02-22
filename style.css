@@ -452,13 +452,16 @@ footer {
   }
 
   .hamburger.active .line:first-child {
-    transform: translateY(-300px);
+    /* transform: translateY(-300px); */
+    transform: rotate(45deg) translateY(10px) translateX(8px);
   }
   .hamburger.active .line:nth-child(2) {
-    transform: rotate(-405deg) translateY(8px);
+    /* transform: rotate(-405deg) translateY(8px); */
+    display: none;
   }
   .hamburger.active .line:nth-child(3) {
-    transform: rotate(-320deg) translateY(-10px);
+    /* transform: rotate(-320deg) translateY(-10px); */
+    transform: rotate(-45deg);
   }
 
   nav {
