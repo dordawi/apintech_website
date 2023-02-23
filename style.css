@@ -453,7 +453,7 @@ footer {
 
   .hamburger.active .line:first-child {
     /* transform: translateY(-300px); */
-    transform: rotate(45deg) translateY(10px) translateX(8px);
+    transform: rotate(45deg) translateY(10px) translateX(9px);
   }
   .hamburger.active .line:nth-child(2) {
     /* transform: rotate(-405deg) translateY(8px); */
@@ -556,6 +556,31 @@ footer {
   .gallery .image-container .image {
     height: 6rem;
     width: 11rem;
+  }
+  .gallery .controls {
+    justify-content: center;
+  }
+
+  .picLogo {
+    height: 4rem;
+    padding: 0.5rem;
+  }
+  nav ul {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .gallery .image-container .image {
+    height: 5rem;
+    width: 8rem;
   }
   .gallery .controls {
     justify-content: center;
