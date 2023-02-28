@@ -481,6 +481,7 @@ footer {
   nav ul {
     position: absolute;
     right: 0;
+    left: 0;
     top: 8vh;
     background-color: #334756;
     height: 92vh;
