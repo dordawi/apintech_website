@@ -214,13 +214,14 @@ nav ul li a:hover::after {
   flex-wrap: wrap;
   justify-content: space-evenly;
   justify-items: flex-start;
-  gap: 8rem;
+  /* gap: 8rem; */
 }
 
 .offerItem {
   width: 30rem;
   display: flex;
   flex-direction: column;
+  /* border: 1px solid red; */
 }
 
 .imgOfferItem {
@@ -577,7 +578,6 @@ footer {
   }
   nav ul {
     width: 100%;
-    left: -100%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -597,9 +597,18 @@ footer {
   }
   .offerItem ul {
     padding-left: 1rem;
+    min-height: 100px;
   }
   .fa-ul {
     margin-left: 1em;
+  }
+  .textOfferItem h3::after {
+    content: "";
+    margin: 0.5rem 0 1rem 0;
+    display: block;
+    height: 3px;
+    width: 8rem;
+    background-color: var(--secondColor);
   }
 
   .gallery .controls {
@@ -628,6 +637,5 @@ footer {
   }
   nav ul {
     width: 100%;
-    left: -100%;
   }
 }
