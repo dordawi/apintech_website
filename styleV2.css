@@ -537,7 +537,6 @@ footer {
   nav {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
     position: sticky;
     top: 0;
@@ -578,6 +577,7 @@ footer {
   }
   nav ul {
     width: 100%;
+    left: -100%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -628,5 +628,6 @@ footer {
   }
   nav ul {
     width: 100%;
+    left: -100%;
   }
 }
